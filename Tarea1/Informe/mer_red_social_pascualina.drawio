@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram name="MER Red Social Pascualina" id="mer-pascualina">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="e_usuario" value="&lt;b&gt;USUARIO&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_usuario (PK)&lt;br&gt;nombre&lt;br&gt;correo&lt;br&gt;carrera&lt;br&gt;area_estudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#DAE8FC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="400" y="40" width="220" height="130" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_interes" value="&lt;b&gt;INTERES&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_interes (PK)&lt;br&gt;nombre&lt;br&gt;tipo" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#D5E8D4;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="80" y="60" width="180" height="90" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_publicacion" value="&lt;b&gt;PUBLICACION&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_publicacion (PK)&lt;br&gt;id_usuario (FK)&lt;br&gt;contenido&lt;br&gt;fecha_publicacion&lt;br&gt;tipo" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#FFE6CC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="400" y="260" width="220" height="110" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_pregunta" value="&lt;b&gt;PREGUNTA&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_publicacion (PK,FK)&lt;br&gt;materia_relacionada" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#FFF2CC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="60" y="460" width="160" height="70" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_recurso" value="&lt;b&gt;RECURSO&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_publicacion (PK,FK)&lt;br&gt;enlace&lt;br&gt;formato" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#FFF2CC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="260" y="460" width="160" height="80" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_noticia" value="&lt;b&gt;NOTICIA&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_publicacion (PK,FK)&lt;br&gt;fuente" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#FFF2CC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="460" y="460" width="160" height="70" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_meme" value="&lt;b&gt;MEME&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_publicacion (PK,FK)&lt;br&gt;url_imagen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#FFF2CC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="660" y="460" width="160" height="70" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_grupo" value="&lt;b&gt;GRUPO&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_grupo (PK)&lt;br&gt;nombre&lt;br&gt;categoria&lt;br&gt;id_usuario_creador (FK)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#E1D5E7;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="760" y="40" width="200" height="110" as="geometry"/>
+    </mxCell>
+        <mxCell id="e_evento" value="&lt;b&gt;EVENTO&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;id_evento (PK)&lt;br&gt;nombre&lt;br&gt;fecha_hora&lt;br&gt;lugar&lt;br&gt;id_usuario_organizador (FK)&lt;br&gt;id_grupo (FK, opcional)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;spacing=6;fillColor=#F8CECC;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="760" y="260" width="200" height="130" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_sigue" value="sigue (N:M reflexiva)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERmany;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;exitX=0.5;exitY=0;entryX=0.5;entryY=0;exitDx=0;exitDy=-30;entryDx=0;entryDy=-30;" edge="1" parent="1" source="e_usuario" target="e_usuario">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_tiene" value="tiene (N:M)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERmany;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_usuario" target="e_interes">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_publica" value="publica (1:N)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_usuario" target="e_publicacion">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_es_pregunta" value="es" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERzeroToOne;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_publicacion" target="e_pregunta">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_es_recurso" value="es" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERzeroToOne;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_publicacion" target="e_recurso">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_es_noticia" value="es" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERzeroToOne;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_publicacion" target="e_noticia">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_es_meme" value="es" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERzeroToOne;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_publicacion" target="e_meme">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_crea" value="crea (1:N)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_usuario" target="e_grupo">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_participa" value="participa_en (N:M)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERmany;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" edge="1" parent="1" source="e_usuario" target="e_grupo">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_organiza" value="organiza (1:N)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERone;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_usuario" target="e_evento">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_asiste" value="asiste (N:M)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERmany;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" edge="1" parent="1" source="e_usuario" target="e_evento">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+        <mxCell id="r_agenda" value="agenda (1:N, opcional)" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;startArrow=ERzeroToOne;endArrow=ERmany;rounded=0;strokeColor=#666666;fontColor=#333333;" edge="1" parent="1" source="e_grupo" target="e_evento">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
