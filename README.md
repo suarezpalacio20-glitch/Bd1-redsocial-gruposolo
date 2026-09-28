@@ -23,3 +23,30 @@ Tarea1/
 ├── Informe/     -> Memoria justificativa y diagrama MER
 └── Video/       -> Video de presentación del equipo
 ```
+
+
+# 🌐 Bd1-redsocial-gruposolo
+
+Este repositorio contiene el desarrollo del proyecto de Red Social para la asignatura de **Bases de Datos 1**. Aquí se irán subiendo todas las entregas, tareas y scripts correspondientes al diseño e implementación del sistema.
+
+## 📁 Estructura del Proyecto
+
+* **`/Tarea1`:** Contiene los archivos, diagramas o scripts correspondientes a la primera entrega del curso.
+* **`README.md`:** Este archivo con las instrucciones y documentación general.
+
+## 🛠️ Tecnologías y Herramientas
+
+* **Base de Datos:** MySQL / PostgreSQL / Oracle
+* **Modelado:** Diagramas Entidad-Relación (DER)
+* **Lenguaje de programación:** Python / Java / PHP (si aplica)
+
+## 🚀 Cómo ejecutar o revisar las tareas
+
+1. Revisa el contenido de la carpeta de la tarea correspondiente (por ejemplo, `Tarea1`).
+2. Sigue las instrucciones específicas del archivo de la tarea o ejecuta los scripts SQL adjuntos en tu gestor de base de datos.
+
+## ✒️ Autor
+
+* **Harold Stevent Suarez Palacio** - [Mi GitHub](https://github.com)
+* **Curso:** Bases de Datos 1
+* **Centro educativo:** Instituto Universitario Pascual Bravo
