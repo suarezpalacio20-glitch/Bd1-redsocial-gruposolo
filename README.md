@@ -50,3 +50,4 @@ Este repositorio contiene el desarrollo del proyecto de Red Social para la asign
 * **Harold Stevent Suarez Palacio** - [Mi GitHub](https://github.com)
 * **Curso:** Bases de Datos 1
 * **Centro educativo:** Instituto Universitario Pascual Bravo
+
