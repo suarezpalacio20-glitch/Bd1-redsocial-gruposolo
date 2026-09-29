@@ -1,1 +1,15 @@
 
+# 🌐 Nombre del proyecto: Bd1-redsocial-gruposolo
+
+## 👥 Integrantes del equipo
+* **Harold Stevent Suarez Palacio** - [Mi GitHub](https://github.com)
+* **Curso:** Bases de Datos 1
+* **Centro educativo:** Instituto Universitario Pascual Bravo
+
+## 📝 Breve descripción del caso
+El proyecto consiste en el diseño de una base de datos para una **Red Social Estudiantil**. El objetivo es mejorar la comunicación e interacción entre estudiantes mediante la creación de perfiles, la conexión con compañeros para tutorías o mentorías, la publicación de actualizaciones y recursos útiles, y la creación de grupos de estudio y eventos informales dentro de la comunidad educativa.
+
+## 📁 Estructura del Proyecto
+* **`/Tarea2`:** Contiene los entregables oficiales de esta etapa.
+  * **`/Informe`:** Almacena la memoria justificativa, el modelo lógico y el diccionario de datos (1FN, 2FN, 3FN).
+  * **`/Video`:** Contiene el video explicativo de la sustentación del diseño.
