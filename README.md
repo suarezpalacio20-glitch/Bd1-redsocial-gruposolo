@@ -51,3 +51,37 @@ Este repositorio contiene el desarrollo del proyecto de Red Social para la asign
 * **Curso:** Bases de Datos 1
 * **Centro educativo:** Instituto Universitario Pascual Bravo
 
+## 📖 Diccionario de Datos (Red Social Estudiantil)
+
+A continuación se detallan las tablas principales del sistema con sus respectivos campos, tipos de datos y restricciones:
+
+### 1. Tabla: `Usuario`
+Almacena la información de los estudiantes registrados en la plataforma.
+
+| Campo | Tipo de Datos | Restricciones | Descripción |
+| :--- | :--- | :--- | :--- |
+| `id_usuario` | ENTERO | PK, Autoincremental | Identificador único del estudiante. |
+| `nombre` | TEXTO (100) | No Nulo | Nombre completo del usuario. |
+| `correo` | TEXTO (100) | No Nulo, Único | Correo institucional del estudiante. |
+| `fecha_registro`| FECHA | No Nulo | Día en que se creó la cuenta. |
+
+### 2. Tabla: `Publicacion`
+Almacena las actualizaciones y recursos compartidos por los usuarios.
+
+| Campo | Tipo de Datos | Restricciones | Descripción |
+| :--- | :--- | :--- | :--- |
+| `id_publicacion`| ENTERO | PK, Autoincremental | Identificador único del post. |
+| `contenido` | TEXTO (M text) | No Nulo | Mensaje o recurso compartido. |
+| `fecha_creacion`| FECHA / HORA | No Nulo | Momento exacto de la publicación. |
+| `id_usuario` | ENTERO | FK (Usuario) | Relación con el estudiante que publicó. |
+
+### 3. Tabla: `Grupo`
+Almacena los grupos de estudio o eventos informales creados en la red.
+
+| Campo | Tipo de Datos | Restricciones | Descripción |
+| :--- | :--- | :--- | :--- |
+| `id_grupo` | ENTERO | PK, Autoincremental | Identificador único del grupo. |
+| `nombre_grupo` | TEXTO (100) | No Nulo | Nombre de la materia o tema del grupo. |
+| `descripcion` | TEXTO (255) | Opcional | Propósito del grupo de estudio. |
+
+
